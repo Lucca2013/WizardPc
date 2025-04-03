@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configurações de PC Gamer</title>
+  <style>
+    :root {
+      --cor-primaria: #007bff;
+      --cor-secundaria: #00a6ff;
+      --fundo-escuro: #0f0f0f;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--fundo-escuro);
+      color: #e0e0e0;
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+      padding: 2rem;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      margin-bottom: 3rem;
+    }
+
+    .title {
+      font-size: 2.5rem;
+      color: #fff;
+      margin: 0 0 1rem 0;
+    }
+
+    .config-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .config-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid #444;
+      border-radius: 12px;
+      color: var(--cor-primaria);
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .config-link:hover {
+      background: rgba(0, 123, 255, 0.1);
+      transform: translateY(-3px);
+      box-shadow: 0 0 15px rgba(0, 123, 255, 0.2);
+    }
+
+    .badge {
+      background: var(--cor-primaria);
+      color: #fff;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      margin-left: 1rem;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    }
+
+    .back-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: var(--cor-primaria);
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-btn:hover {
+      background-color: #0056b3;
+    }
+
+    @media (max-width: 768px) {
+      .config-container {
+        padding: 1rem;
+      }
+
+      .config-link {
+        flex-direction: column;
+        padding: 1.2rem;
+        text-align: center;
+      }
+
+      .badge {
+        margin: 0.5rem 0 0 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="title">Configurações de PC Gamer</h1>
+    <!-- Botão de Voltar -->
+    <a href="javascript:history.back()" class="back-btn">Voltar</a>
+  </header>
+
+  <div class="config-container">
+    <a href="/pcs_prontos/pc_2000/index.html" class="config-link">
+      Configuração Básica
+      <span class="badge">R$ 2.000</span>
+    </a>
+
+    <a href="/pcs_prontos/pc_3000/index.html" class="config-link">
+      Configuração Intermediária
+      <span class="badge">R$ 3.000</span>
+    </a>
+
+    <a href="/pcs_prontos/pc_4000/index.html" class="config-link">
+      Configuração Custo X benfício
+      <span class="badge">R$ 4.000</span>
+    </a>
+
+    <a href="/pcs_prontos/pc_5000/index.html" class="config-link">
+      Configuração avançada
+      <span class="badge">R$ 5.000</span>
+    </a>
+
+    <a href="/pcs_prontos/pc_6000/index.html" class="config-link">
+      Configuração AM5 avançada
+      <span class="badge">R$ 6.300</span>
+    </a>
+
+    <a href="/pcs_prontos/pc_7000/index.html" class="config-link">
+      Configuração AM5 Premium
+      <span class="badge">R$ 6.900</span>
+    </a>
+  </div>
+</body>
+
+</html>

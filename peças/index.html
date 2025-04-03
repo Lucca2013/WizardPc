@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PCBuilder - Top 24 Componentes</title>
+    <style>
+        :root {
+            --neon-azul: #00f3ff;
+            --fundo-preto: #0a0a0a;
+            --destaque-azul: #0066ff;
+            --borda-neon: 1px solid rgba(0, 243, 255, 0.3);
+            --gradiente-neon: linear-gradient(45deg, var(--neon-azul), var(--destaque-azul));
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--fundo-preto);
+            color: #e0e0e0;
+            min-height: 100vh;
+        }
+
+        .componentes-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 20px 50px;
+        }
+
+        .titulo-principal {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            text-shadow: 0 0 20px var(--neon-azul);
+            background: var(--gradiente-neon);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .lista-componentes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .componente-card {
+            background: rgba(15, 15, 15, 0.9);
+            padding: 20px;
+            border-radius: 8px;
+            border: var(--borda-neon);
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .componente-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(0, 243, 255, 0.3);
+        }
+
+        .componente-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg,
+                    transparent,
+                    rgba(0, 243, 255, 0.1),
+                    transparent);
+            transform: rotate(45deg);
+            pointer-events: none;
+        }
+
+        .componente-titulo {
+            color: var(--neon-azul);
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            min-height: 60px;
+        }
+
+        .componente-especs {
+            list-style: none;
+            margin: 15px 0;
+            padding: 0;
+        }
+
+        .componente-especs li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(0, 243, 255, 0.1);
+            display: flex;
+            align-items: center;
+        }
+
+        .componente-especs li::before {
+            content: '▹';
+            color: var(--neon-azul);
+            margin-right: 10px;
+        }
+
+        .componente-preco {
+            color: var(--neon-azul);
+            font-size: 1.4em;
+            margin: 20px 0;
+            text-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
+            text-align: center;
+        }
+
+        .botao-oferta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 15px;
+            background: rgba(0, 243, 255, 0.1);
+            color: var(--neon-azul);
+            border: var(--borda-neon);
+            border-radius: 5px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        .botao-oferta:hover {
+            background: var(--neon-azul);
+            color: #000;
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .componentes-container {
+                padding: 80px 15px;
+            }
+
+            .titulo-principal {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="componentes-container">
+        <h1 class="titulo-principal">TOP 24 COMPONENTES RECOMENDADOS</h1>
+
+        <div class="lista-componentes">
+            <!-- Processadores -->
+            <div class="componente-card">
+                <h3 class="componente-titulo">AMD Ryzen 7 7800X3D</h3>
+                <ul class="componente-especs">
+                    <li>8 Núcleos / 16 Threads</li>
+                    <li>5.0GHz Boost</li>
+                    <li>Cache 96MB 3D V-Cache</li>
+                </ul>
+                <div class="componente-preco">R$ 3.299,00</div>
+            </div>
+
+            <!-- Placas de Vídeo -->
+            <div class="componente-card">
+                <h3 class="componente-titulo">RX 7900 XTX 24GB</h3>
+                <ul class="componente-especs">
+                    <li>24GB GDDR6</li>
+                    <li>2.3GHz Game Clock</li>
+                    <li>PCIe 4.0</li>
+                </ul>
+                <div class="componente-preco">R$ 6.999,00</div>
+            </div>
+
+            <!-- Memórias RAM -->
+            <div class="componente-card">
+                <h3 class="componente-titulo">Kingston Fury 32GB DDR5</h3>
+                <ul class="componente-especs">
+                    <li>6000MHz CL36</li>
+                    <li>RGB Sync</li>
+                    <li>XMP 3.0</li>
+                </ul>
+                <div class="componente-preco">R$ 899,00</div>
+            </div>
+
+            <!-- SSDs -->
+            <div class="componente-card">
+                <h3 class="componente-titulo">Samsung 990 Pro 2TB</h3>
+                <ul class="componente-especs">
+                    <li>PCIe 4.0 NVMe</li>
+                    <li>7450MB/s Leitura</li>
+                    <li>5 anos garantia</li>
+                </ul>
+                <div class="componente-preco">R$ 1.399,00</div>
+            </div>
+
+            <!-- Fontes -->
+            <div class="componente-card">
+                <h3 class="componente-titulo">Corsair RM850x</h3>
+                <ul class="componente-especs">
+                    <li>850W 80 Plus Gold</li>
+                    <li>Modular Full</li>
+                    <li>10 anos garantia</li>
+                </ul>
+                <div class="componente-preco">R$ 1.099,00</div>
+            </div>
+
+            <!-- Coolers -->
+            <div class="componente-card">
+                <h3 class="componente-titulo">Noctua NH-D15</h3>
+                <ul class="componente-especs">
+                    <li>Duplo Tower</li>
+                    <li>6 Heatpipes</li>
+                    <li>Compatível AM5</li>
+                </ul>
+                <div class="componente-preco">R$ 699,00</div>
+            </div>
+
+            <!-- Placas-mãe -->
+            <div class="componente-card">
+                <h3 class="componente-titulo">ASUS ROG X670E-E</h3>
+                <ul class="componente-especs">
+                    <li>Socket AM5</li>
+                    <li>PCIe 5.0</li>
+                    <li>WiFi 6E</li>
+                </ul>
+                <div class="componente-preco">R$ 3.999,00</div>
+            </div>
+
+            <!-- Gabinetes -->
+            <div class="componente-card">
+                <h3 class="componente-titulo">Lian Li O11 Dynamic</h3>
+                <ul class="componente-especs">
+                    <li>Mid Tower</li>
+                    <li>Vidro Temperado</li>
+                    <li>9 slots fans</li>
+                </ul>
+                <div class="componente-preco">R$ 1.299,00</div>
+            </div>
+
+            <!-- Monitores -->
+            <div class="componente-card">
+                <h3 class="componente-titulo">LG UltraGear 27GP850</h3>
+                <ul class="componente-especs">
+                    <li>27" QHD Nano IPS</li>
+                    <li>165Hz</li>
+                    <li>1ms GtG</li>
+                </ul>
+                <div class="componente-preco">R$ 2.499,00</div>
+            </div>
+
+            <!-- Headsets -->
+            <div class="componente-card">
+                <h3 class="componente-titulo">HyperX Cloud Alpha</h3>
+                <ul class="componente-especs">
+                    <li>Som 7.1 Virtual</li>
+                    <li>Microfone Removível</li>
+                    <li>Conforto Premium</li>
+                </ul>
+                <div class="componente-preco">R$ 599,00</div>
+            </div>
+
+            <!-- Teclados -->
+            <div class="componente-card">
+                <h3 class="componente-titulo">Razer Huntsman V2</h3>
+                <ul class="componente-especs">
+                    <li>Switches Ópticos</li>
+                    <li>RGB Chroma</li>
+                    <li>Wrist Rest Magnético</li>
+                </ul>
+                <div class="componente-preco">R$ 1.199,00</div>
+            </div>
+
+            <!-- Mouses -->
+            <div class="componente-card">
+                <h3 class="componente-titulo">Logitech G Pro X Superlight</h3>
+                <ul class="componente-especs">
+                    <li>63g Ultra Leve</li>
+                    <li>Sensor HERO 25K</li>
+                    <li>Sem Fio</li>
+                </ul>
+                <div class="componente-preco">R$ 899,00</div>
+            </div>
+
+            <!-- Mousepads -->
+            <div class="componente-card">
+                <h3 class="componente-titulo">SteelSeries QcK Prism</h3>
+                <ul class="componente-especs">
+                    <li>RGB 2 Zones</li>
+                    <li>Superfície Otimizada</li>
+                    <li>900x300mm</li>
+                </ul>
+                <div class="componente-preco">R$ 349,00</div>
+            </div>
+
+            <!-- Soundcards -->
+            <div class="componente-card">
+                <h3 class="componente-titulo">Creative Sound Blaster Z</h3>
+                <ul class="componente-especs">
+                    <li>116dB SNR</li>
+                    <li>Suporte 5.1</li>
+                    <li>Beamforming</li>
+                </ul>
+                <div class="componente-preco">R$ 799,00</div>
+            </div>
+
+            <!-- Controladores -->
+            <div class="componente-card">
+                <h3 class="componente-titulo">Xbox Elite Series 2</h3>
+                <ul class="componente-especs">
+                    <li>6 Paddles Traseiros</li>
+                    <li>40h Bateria</li>
+                    <li>Wireless</li>
+                </ul>
+                <div class="componente-preco">R$ 1.399,00</div>
+            </div>
+
+            <!-- Webcams -->
+            <div class="componente-card">
+                <h3 class="componente-titulo">Logitech C922 Pro</h3>
+                <ul class="componente-especs">
+                    <li>1080p 60FPS</li>
+                    <li>Microfone Estéreo</li>
+                    <li>Low-Light</li>
+                </ul>
+                <div class="componente-preco">R$ 699,00</div>
+            </div>
+
+            <!-- Kits Watercooler -->
+            <div class="componente-card">
+                <h3 class="componente-titulo">NZXT Kraken Z73</h3>
+                <ul class="componente-especs">
+                    <li>360mm Radiator</li>
+                    <li>LCD Display</li>
+                    <li>RGB Infinity Mirror</li>
+                </ul>
+                <div class="componente-preco">R$ 2.199,00</div>
+            </div>
+
+            <!-- Ventoinhas -->
+            <div class="componente-card">
+                <h3 class="componente-titulo">Lian Li UNI FAN SL-Infinity</h3>
+                <ul class="componente-especs">
+                    <li>120mm RGB</li>
+                    <li>Conector Uni Hub</li>
+                    <li>28dBA Máximo</li>
+                </ul>
+                <div class="componente-preco">R$ 899,00</div>
+            </div>
+
+            <!-- Hubs USB -->
+            <div class="componente-card">
+                <h3 class="componente-titulo">Cable Matters USB 3.1</h3>
+                <ul class="componente-especs">
+                    <li>10 Portas</li>
+                    <li>5Gbps Transferência</li>
+                    <li>Alimentação Externa</li>
+                </ul>
+                <div class="componente-preco">R$ 249,00</div>
+            </div>
+
+            <!-- Controlador Fan -->
+            <div class="componente-card">
+                <h3 class="componente-titulo">Corsair Commander Pro</h3>
+                <ul class="componente-especs">
+                    <li>6 Canais Fans</li>
+                    <li>4 Sensores Temp</li>
+                    <li>USB 2.0</li>
+                </ul>
+                <div class="componente-preco">R$ 399,00</div>
+            </div>
+
+            <!-- Kits Cabos -->
+            <div class="componente-card">
+                <h3 class="componente-titulo">CableMod ModMesh</h3>
+                <ul class="componente-especs">
+                    <li>Conjunto Premium</li>
+                    <li>16 AWG</li>
+                    <li>Variadas Cores</li>
+                </ul>
+                <div class="componente-preco">R$ 599,00</div>
+            </div>
+
+            <!-- UPS -->
+            <div class="componente-card">
+                <h3 class="componente-titulo">APC Back-UPS 1500VA</h3>
+                <ul class="componente-especs">
+                    <li>900W Potência</li>
+                    <li>8 Tomadas</li>
+                    <li>Proteção Surge</li>
+                </ul>
+                <div class="componente-preco">R$ 1.899,00</div>
+            </div>
+
+            <!-- Kits Limpeza -->
+            <div class="componente-card">
+                <h3 class="componente-titulo">Compressed Air Pro</h3>
+                <ul class="componente-especs">
+                    <li>Ar Comprimido 400ml</li>
+                    <li>Cânula Longa</li>
+                    <li>Não Condutivo</li>
+                </ul>
+                <div class="componente-preco">R$ 89,90</div>
+            </div>
+
+            <!-- Mesas Gaming -->
+            <div class="componente-card">
+                <h3 class="componente-titulo">DXRacer GD/1000</h3>
+                <ul class="componente-especs">
+                    <li>160x80cm</li>
+                    <li>Altura Ajustável</li>
+                    <li>Cabo Management</li>
+                </ul>
+                <div class="componente-preco">R$ 2.999,00</div>
+            </div>
+
+            <!-- Almofadas Ergonomia -->
+            <div class="componente-card">
+                <h3 class="componente-titulo">Dragon War Wrist Rest</h3>
+                <ul class="componente-especs">
+                    <li>Memória de Gel</li>
+                    <li>Antiderrapante</li>
+                    <li>50cm Comprimento</li>
+                </ul>
+                <div class="componente-preco">R$ 159,00</div>
+            </div>
+
+            <!-- Kits Ferramentas -->
+            <div class="componente-card">
+                <h3 class="componente-titulo">iFixit Pro Tech Toolkit</h3>
+                <ul class="componente-especs">
+                    <li>64 Peças</li>
+                    <li>Precisão Suíça</li>
+                    <li>Case Organizador</li>
+                </ul>
+                <div class="componente-preco">R$ 699,00</div>
+            </div>
+
+            <!-- Braços Monitor -->
+            <div class="componente-card">
+                <h3 class="componente-titulo">ErGear EGCM3</h3>
+                <ul class="componente-especs">
+                    <li>Carga 9kg</li>
+                    <li>VESA 75/100</li>
+                    <li>Rotación 360°</li>
+                </ul>
+                <div class="componente-preco">R$ 499,00</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

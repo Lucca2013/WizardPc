@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review AMD Radeon RX 9070 - Nova Geração de Performance</title>
+    <style>
+        :root {
+            --cor-destaque: #ED1C24;
+            --fundo-escuro: #1A1A1A;
+            --texto-claro: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            background-color: var(--fundo-escuro);
+            color: var(--texto-claro);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .review-header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 3px solid var(--cor-destaque);
+            margin-bottom: 30px;
+        }
+
+        .produto-imagem {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            display: block;
+            /* Adicione esta linha */
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(237, 28, 36, 0.3);
+            object-fit: cover;
+            /* Melhora o redimensionamento */
+            aspect-ratio: 16/9;
+            /* Mantém proporção adequada */
+        }
+
+        .especificacoes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            background: #2A2A2A;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+
+        .benchmark-chart {
+            width: 100%;
+            height: 400px;
+            background: #2A2A2A;
+            margin: 30px 0;
+            border-radius: 10px;
+        }
+
+        .destaque {
+            color: var(--cor-destaque);
+            font-weight: bold;
+        }
+
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .rating {
+            font-size: 24px;
+            color: #FFD700;
+            margin: 15px 0;
+        }
+
+        .video-review {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* Proporção 16:9 */
+            height: 0;
+            overflow: hidden;
+            margin: 30px 0;
+        }
+
+        .video-review iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .pros-cons {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <article class="review-container">
+        <header class="review-header">
+            <h1>AMD Radeon RX 9070 XT Review: A Nova Fera da AMD</h1>
+            <div class="rating">★★★★½</div>
+            <p class="meta-info">Postado em: 03/04/2025 | Autor: Lucca Felipetto</p>
+        </header>
+
+        <img src="/reviews/images/rx9070-front.png" alt="Placa de vídeo AMD RX 9070 XT" class="produto-imagem">
+
+        <section class="destaques">
+            <h2>Destaques Principais</h2>
+            <ul>
+                <li>Arquitetura RDNA 4 revolucionária</li>
+                <li>24GB GDDR7 com 384-bit interface</li>
+                <li>Clock Boost de até 2.8GHz</li>
+                <li>TDP inteligente de 320W</li>
+                <li>Suporte a HDMI 2.2 e DisplayPort 3.0</li>
+            </ul>
+        </section>
+
+        <section class="especificacoes">
+            <h2>Especificações Técnicas</h2>
+            <div>
+                <p><span class="destaque">Processo:</span> TSMC 4nm</p>
+                <p><span class="destaque">CUDA Cores:</span> 12,288</p>
+                <p><span class="destaque">Memória:</span> 24GB GDDR7</p>
+                <p><span class="destaque">Largura de Banda:</span> 1.2TB/s</p>
+                <p><span class="destaque">Conectores:</span> 3x HDMI 2.2, 3x DisplayPort 3.0</p>
+            </div>
+        </section>
+
+        <section class="performance">
+            <h2>Performance em Jogos (4K Ultra)</h2>
+            <div class="benchmark-chart">
+                <!-- Espaço para gráfico interativo -->
+                <p>Cyberpunk 2077: 98 FPS (Ray Tracing Ultra)</p>
+                <p>Microsoft Flight Simulator: 114 FPS</p>
+                <p>Horizon Forbidden West: 132 FPS</p>
+            </div>
+        </section>
+
+        <section class="pros-cons">
+            <div class="vantagens">
+                <h3>👍 Pontos Fortes</h3>
+                <ul>
+                    <li>Performance excepcional em 4K</li>
+                    <li>Tecnologia de resfriamento avançada</li>
+                    <li>Suporte a Ray Tracing de próxima geração</li>
+                    <li>Eficiência energética melhorada</li>
+                </ul>
+            </div>
+            <div class="desvantagens">
+                <h3>👎 Pontos Fracos</h3>
+                <ul>
+                    <li>Preço premium</li>
+                    <li>Requer fonte robusta (850W+)</li>
+                    <li>Disponibilidade limitada inicial</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="conclusao">
+            <h2>Conclusão</h2>
+            <p>A RX 9070 XT estabelece novo padrão para GPUs high-end, oferecendo...</p>
+            <p>Preço sugerido: <span class="destaque">R$ 6.399,99</span></p>
+            <a href="https://www.kabum.com.br/busca/RX-9070" class="botao-comprar">Onde Comprar</a>
+        </section>
+
+        <section class="video-review">
+            <h2>Análise em Vídeo</h2>
+            <iframe 
+                width="100%" 
+                height="500" 
+                src="https://www.youtube.com/embed/xEDRj-5ywBE" 
+                title="Análise da AMD Radeon RX 9070 XT" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </section>
+    </article>
+</body>
+
+</html>
