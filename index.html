@@ -2,17 +2,22 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="WizardPc - Setup Gamer Perfeito | Componentes High-End">
-  <title>WizardPc - Setup Gamer Perfeito | Componentes High-End</title>
-  <!-- AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXX"
-    crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="WizardPc - Setup Gamer Perfeito | Componentes High-End" />
+  <title>WizardPc - Setup Gamer Perfeito</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
   <style>
-    /* Reset básico */
-    html {
-      scroll-behavior: smooth;
+    :root {
+      --primary: #0066ff;
+      --bg: #0f0f0f;
+      --card: #1a1a1a;
+      --text: #eaeaea;
+      --accent: #1c1c1c;
     }
 
     * {
@@ -21,434 +26,299 @@
       box-sizing: border-box;
     }
 
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #1d1d1d;
-      color: #e0e0e0;
-      min-height: 100vh;
+    html {
+      scroll-behavior: smooth;
     }
 
-    /* Cabeçalho */
-    header {
-      background: #111;
-      padding: 20px;
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 18px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .header {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
+      padding: 30px 60px;
+      background: var(--accent);
+      border-bottom: 1px solid #333;
       position: fixed;
       width: 100%;
       top: 0;
       z-index: 1000;
-      border-bottom: 1px solid #444;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    }
-
-    .logo {
-      font-size: 32px;
-      color: #fff;
-      font-weight: bold;
-    }
-
-    nav ul {
-      display: flex;
-      gap: 15px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    nav ul li a {
-      color: #fff;
-      text-decoration: none;
-      padding: 10px 15px;
-      border-radius: 5px;
-      transition: all 0.2s ease;
-    }
-
-    nav ul li a:hover {
-      background: rgba(255, 255, 255, 0.1);
-    }
-
-    /* Seção Hero */
-    .hero-section {
-      padding: 180px 20px 100px;
-      background: url('setup-gamer-banner.jpg') center/cover no-repeat;
-      text-align: center;
-      position: relative;
-      background-size: cover;
-    }
-
-    .hero-section h1 {
-      font-size: 3.5em;
-      margin-bottom: 30px;
-    }
-
-    /* Grid de Recursos */
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-      padding: 60px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .component-card {
-      background: #222;
-      padding: 25px;
-      border-radius: 8px;
-      border: 1px solid #444;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-      position: relative;
-    }
-
-    .component-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
-    }
-
-    .component-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 4px;
-      margin: 15px 0;
-      border: 1px solid #444;
-    }
-
-    /* Botões */
-    .buy-btn {
-      display: inline-block;
-      padding: 12px 30px;
-      background: #0066ff;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      border: 1px solid #444;
-      transition: all 0.3s ease;
-      font-weight: bold;
-      cursor: pointer;
-      margin-top: 15px;
-    }
-
-    .buy-btn:hover {
-      background: #0055cc;
-    }
-
-    /* Newsletter */
-    .newsletter {
-      padding: 60px 20px;
-      background: rgba(0, 99, 255, 0.05);
-      text-align: center;
-      border: 1px solid #444;
-      margin: 60px 0;
-    }
-
-    .newsletter input[type="email"] {
-      padding: 12px 20px;
-      width: 300px;
-      margin: 15px;
-      background: #333;
-      border: 1px solid #444;
-      color: #0066ff;
-      border-radius: 6px;
-    }
-
-    /* Footer */
-    footer {
-      background: #000;
-      padding: 50px 20px;
-      border-top: 1px solid #444;
-    }
-
-    .social-proof {
-      display: flex;
-      justify-content: center;
-      gap: 50px;
-      padding: 30px;
-      background: #222;
-      margin: 40px 0;
-      flex-wrap: wrap;
-    }
-
-    /* Seção Encontrar PC Ideal */
-    .cta-banner {
-      background: #222;
-      padding: 40px 20px;
-      margin: 60px auto;
-      border-radius: 10px;
-      border: 1px solid #444;
-      max-width: 800px;
-      width: 90%;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-      scroll-margin-top: 100px;
-    }
-
-    .comparison-tool {
-      display: flex;
-      flex-direction: column;
-      gap: 25px;
-      align-items: center;
-      margin-top: 30px;
-    }
-
-    .comparison-tool select {
-      padding: 12px 25px;
-      background: #333;
-      border: 1px solid #444;
-      color: #0066ff;
-      border-radius: 6px;
-      width: 100%;
-      max-width: 400px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .comparison-tool select:hover {
-      background: #444;
-    }
-
-    .comparison-tool select:focus {
-      outline: none;
-      box-shadow: 0 0 10px rgba(0, 99, 255, 0.3);
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      /* Espaço entre imagem e texto */
     }
 
     .logo img {
-      height: 100px;
-      /* Aumenta a altura da imagem */
+      height: 150px;
       width: auto;
-      /* Mantém a proporção da imagem */
     }
 
-    .menu-toggle {
-      display: none;
+
+    nav ul {
+      display: flex;
+      gap: 30px;
+      list-style: none;
     }
 
-    /* Responsividade */
-    /* Melhorando o menu para celular */
+    nav ul li a {
+      font-size: 18px;
+      padding: 12px 20px;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+
+    nav ul li a:hover {
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+
+    .hero-section {
+      padding-top: 350px;
+      padding-bottom: 180px;
+      text-align: center;
+      padding-left: 30px;
+      padding-right: 30px;
+      background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
+    }
+
+    .hero-section h1 {
+      font-size: 5rem;
+      font-weight: 800;
+      margin-bottom: 25px;
+      color: var(--primary);
+      text-shadow: 3px 3px 12px rgba(0, 102, 255, 0.5);
+    }
+
+    .hero-section p.subtitulo {
+      font-size: 2rem;
+      color: #ccc;
+      margin-bottom: 50px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+    .buy-btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: var(--primary);
+      color: #fff;
+      padding: 20px 48px;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 20px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .buy-btn:hover {
+      background: #004dcc;
+      transform: scale(1.05);
+    }
+
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 40px;
+      max-width: 1300px;
+      margin: 80px auto;
+      padding: 0 30px;
+    }
+
+    .component-card {
+      background: var(--card);
+      padding: 40px;
+      border-radius: 14px;
+      border: 1px solid #333;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+
+    .component-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 25px rgba(0, 102, 255, 0.15);
+    }
+
+    .component-card h3 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .cta-banner {
+      background: var(--accent);
+      margin: 80px auto;
+      padding: 60px 40px;
+      max-width: 900px;
+      border-radius: 14px;
+      text-align: center;
+      border: 1px solid #333;
+    }
+
+    .cta-banner h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    select {
+      background: #1c1c1c;
+      color: var(--primary);
+      border: 1px solid #333;
+      padding: 14px 24px;
+      border-radius: 10px;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    .blog-highlights {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 40px;
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 30px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 50px 20px;
+      border-top: 1px solid #333;
+      color: #888;
+      font-size: 16px;
+    }
+
     @media (max-width: 768px) {
-      body {
-        padding-top: 120px;
-      }
-
-      header {
+      .header {
         flex-direction: column;
-        text-align: center;
-        padding: 15px;
-      }
-
-      nav ul {
-        display: none;
-        /* Esconder o menu padrão no celular */
-        flex-direction: column;
-        gap: 10px;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: #111;
-        padding: 10px 0;
-        border-top: 1px solid #444;
-      }
-
-      nav ul.active {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: none;
+        gap: 20px;
+        padding: 25px;
       }
 
       .hero-section {
-        padding: 120px 15px 60px;
+        padding-top: 300px;
+        text-align: center;
+        padding-left: 30px;
+        padding-right: 30px;
       }
 
       .hero-section h1 {
-        font-size: 2em;
-        margin-bottom: 20px;
+        font-size: 2.4rem;
       }
 
-      .features-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .component-card img {
-        height: 150px;
-      }
-
-      .newsletter input[type="email"] {
-        width: 100%;
-      }
-
-      .menu-toggle {
-        display: block;
-        font-size: 24px;
-        background: none;
-        border: none;
-        color: white;
-        cursor: pointer;
-        padding: 10px;
+      .cta-banner h2 {
+        font-size: 2rem;
       }
 
       nav ul {
-        display: none;
-        /* Esconder menu por padrão */
-        flex-direction: column;
-        gap: 10px;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: #111;
-        padding: 10px 0;
-        border-top: 1px solid #444;
+        flex-wrap: wrap;
+        justify-content: center;
       }
-
-      nav ul.active {
-        display: flex;
-        /* Mostrar quando ativado */
-      }
-
-
     }
   </style>
 </head>
 
 <body>
-  <header>
+
+  <div class="header">
     <div class="logo">
       <a href="/">
-        <img src="/images/logo.png" alt="Wizard PC Logo">
+        <img src="/images/logo.png" alt="Wizard PC Logo" />
       </a>
     </div>
-
-    <button class="menu-toggle">☰</button> <!-- Ícone do menu -->
-
     <nav>
       <ul>
-        <li><a href="/pcs_prontos">Pcs Prontos</a></li>
+        <li><a href="/pcs_prontos">PCs Prontos</a></li>
         <li><a href="/peças/index.html">Peças</a></li>
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#blog">Blog</a></li>
       </ul>
     </nav>
-  </header>
+  </div>
 
-
-
-  <!-- Banner Hero -->
   <section class="hero-section">
     <h1>Construa o PC dos Sonhos</h1>
+    <p class="subtitulo">Monte sua máquina ideal com as melhores peças do mercado</p>
     <a href="#selecionar-componentes" class="buy-btn">Começar Agora</a>
   </section>
 
-  <!-- Anúncio AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8431773617505365"
-    crossorigin="anonymous"></script>
-
-  <!-- Destaques -->
-  <section class="main-content">
-    <div class="features-grid">
-      <div class="component-card">
-        <h3>🔥 Ofertas da Semana</h3>
-        <div class="price-tag">Encontre aqui as melhores ofertas</div>
-        <a href="/peças/index.html" class="buy-btn">Ver Ofertas</a>
-      </div>
-
-      <div class="component-card">
-        <h3>⭐ Top Builds</h3>
-        <p>Veja as configurações mais populares</p>
-        <a href="/pcs_prontos/index.html" class="buy-btn">Inspire-se</a>
-      </div>
+  <section class="features-grid">
+    <div class="component-card">
+      <h3>🔥 Ofertas da Semana</h3>
+      <p>Encontre aqui as melhores ofertas em peças selecionadas.</p>
+      <a href="/peças/index.html" class="buy-btn">Ver Ofertas</a>
     </div>
-
-    <!-- Seção Comparativa -->
-    <div class="cta-banner" id="selecionar-componentes">
-      <h2>Encontre o PC Ideal</h2>
-      <div class="comparison-tool">
-        <p>Uso principal</p>
-        <select id="uso-principal">
-          <option value="jogos">Jogos</option>
-          <option value="edicao-video">Edição de Vídeo</option>
-          <option value="streaming">Streaming</option>
-        </select>
-        <p>Orçamento</p>
-        <select id="orcamento">
-          <option value="2000">R$ 2000</option>
-          <option value="3000">R$ 3000</option>
-          <option value="4000">R$ 4000</option>
-          <option value="5000">R$ 5000</option>
-          <option value="6000">R$ 6000</option>
-          <option value="7000">R$ 7000</option>
-        </select>
-        <a href="javascript:void(0);" class="buy-btn" id="btn-config">Encontrar Configurações</a>
-      </div>
+    <div class="component-card">
+      <h3>⭐ Top Builds</h3>
+      <p>Veja as configurações mais populares entre gamers e criadores.</p>
+      <a href="/pcs_prontos/index.html" class="buy-btn">Inspire-se</a>
     </div>
+  </section>
 
-    <script>
-      document.getElementById("btn-config").addEventListener("click", function () {
-        const usoPrincipal = document.getElementById("uso-principal").value;
-        const orcamento = document.getElementById("orcamento").value;
-
-        // Definindo a URL de destino com base nas escolhas
-        let url = "/pcs_prontos/pc_" + orcamento + "/index.html"; // Exemplo de caminho
-
-        // Alterando o link para a página correspondente
-        window.location.href = url;
-      });
-    </script>
-
-    <!-- Blog e Conteúdo -->
-    <div class="blog-highlights">
-      <article class="component-card" id="reviews">
-        <h3>Último Review: RX 9070</h3>
-        <p>Análise completa da nova placa AMD</p>
-        <a href="/reviews/rx-9070.html" class="buy-btn">Ver review</a>
-      </article>
-      <article class="component-card" id="blog">
-        <h3>Melhores teclados 2025</h3>
-        <p>Créditos: Poisonstp</p>
-        <a href="https://www.youtube.com/watch?v=TiQEXTFVB4U" class="buy-btn">Ver vídeo</a>
-      </article>
+  <section class="cta-banner" id="selecionar-componentes">
+    <h2>Encontre o PC Ideal</h2>
+    <div style="margin-bottom: 20px;">
+      <p>Uso principal:</p>
+      <select id="uso-principal">
+        <option value="jogos">Jogos</option>
+        <option value="edicao-video">Edição de Vídeo</option>
+        <option value="streaming">Streaming</option>
+      </select>
     </div>
+    <div style="margin-bottom: 30px;">
+      <p>Orçamento:</p>
+      <select id="orcamento">
+        <option value="2000">R$ 2000</option>
+        <option value="3000">R$ 3000</option>
+        <option value="4000">R$ 4000</option>
+        <option value="5000">R$ 5000</option>
+        <option value="6000">R$ 6000</option>
+        <option value="7000">R$ 7000</option>
+      </select>
+    </div>
+    <a href="javascript:void(0);" class="buy-btn" id="btn-config">Encontrar Configurações</a>
+  </section>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const menuToggle = document.querySelector(".menu-toggle");
-        const menu = document.querySelector("nav ul");
+  <section class="blog-highlights">
+    <article class="component-card" id="reviews">
+      <h3>Último Review: RX 9070</h3>
+      <p>Análise completa da nova placa AMD para gamers entusiastas.</p>
+      <a href="/reviews/rx-9070.html" class="buy-btn">Ver review</a>
+    </article>
+    <article class="component-card" id="blog">
+      <h3>Melhores teclados 2025</h3>
+      <p>Créditos: Poisonstp — vídeo completo com recomendações top.</p>
+      <a href="https://www.youtube.com/watch?v=TiQEXTFVB4U" class="buy-btn">Ver vídeo</a>
+    </article>
+  </section>
 
-        // Abrir/Fechar menu ao clicar no botão
-        menuToggle.addEventListener("click", function (event) {
-          event.stopPropagation(); // Impede que o clique passe pro body
-          menu.classList.toggle("active");
-        });
+  <footer>
+    <p>&copy; 2025 WizardPc. Todos os direitos reservados.</p>
+    <p style="font-size: 14px; color: #666;">Vídeos incorporados pertencem aos seus respectivos criadores.</p>
+  </footer>
 
-        // Fechar menu ao clicar em qualquer link dentro dele
-        document.querySelectorAll("nav ul li a").forEach(link => {
-          link.addEventListener("click", function () {
-            menu.classList.remove("active");
-          });
-        });
 
-        // Fechar menu ao clicar fora dele
-        document.addEventListener("click", function (event) {
-          if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
-            menu.classList.remove("active");
-          }
-        });
-      });
-    </script>
-
+  <script>
+    document.getElementById("btn-config").addEventListener("click", function () {
+      const usoPrincipal = document.getElementById("uso-principal").value;
+      const orcamento = document.getElementById("orcamento").value;
+      let url = "/pcs_prontos/pc_" + orcamento + "/index.html";
+      window.location.href = url;
+    });
+  </script>
 
 </body>
 
