@@ -229,7 +229,7 @@
       .hero-section h1 {
         font-size: clamp(5rem, 5vw, 3rem);
       }
-      
+
 
       .hero-section p.subtitulo {
         font-size: clamp(1rem, 4vw, 1.5rem);
@@ -256,14 +256,18 @@
 
       #btn-config {
         padding: 14px 24px;
-        text-align: center;
         background-color: var(--primary);
         color: white;
         border-radius: 10px;
         font-weight: bold;
-        max-width: 300px;
-        margin: 30px auto;
         cursor: pointer;
+        display: inline-block;
+        transition: background 0.3s, transform 0.2s;
+      }
+
+      #btn-config:hover {
+        background: #004dcc;
+        transform: scale(1.05);
       }
     }
   </style>
@@ -491,9 +495,9 @@
         <option value="7000">R$ 7000</option>
       </select>
     </div>
-    <a href="javascript:void(0);" class="buy-btn"></a>
+    <div id="btn-config" class="buy-btn">Encontrar Configurações</div>
   </section>
-  <div id="btn-config">Encontrar Configurações></div>
+
   <section class="blog-highlights">
     <article class="component-card" id="reviews">
       <h3>Último Review: RX 9070</h3>
