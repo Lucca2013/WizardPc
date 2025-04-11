@@ -206,27 +206,64 @@
       .header {
         flex-direction: column;
         gap: 20px;
-        padding: 25px;
-      }
-
-      .hero-section {
-        padding-top: 400px;
+        padding: 20px;
         text-align: center;
-        padding-left: 30px;
-        padding-right: 30px;
       }
 
-      .hero-section h1 {
-        font-size: 2.4rem;
-      }
-
-      .cta-banner h2 {
-        font-size: 2rem;
+      .logo img {
+        height: 100px;
       }
 
       nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .hero-section {
+        padding-top: 500px;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .hero-section h1 {
+        font-size: clamp(5rem, 5vw, 3rem);
+      }
+      
+
+      .hero-section p.subtitulo {
+        font-size: clamp(1rem, 4vw, 1.5rem);
+      }
+
+      .buy-btn {
+        padding: 14px 28px;
+        font-size: 1rem;
+      }
+
+      .features-grid,
+      .blog-highlights {
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+      }
+
+      .cta-banner {
+        padding: 30px 20px;
+      }
+
+      .cta-banner h2 {
+        font-size: 1.8rem;
+      }
+
+      #btn-config {
+        padding: 14px 24px;
+        text-align: center;
+        background-color: var(--primary);
+        color: white;
+        border-radius: 10px;
+        font-weight: bold;
+        max-width: 300px;
+        margin: 30px auto;
+        cursor: pointer;
       }
     }
   </style>
@@ -395,7 +432,7 @@
         </head>
 
         <body>
-          <div class="config-container" >
+          <div class="config-container">
             <a href="/pcs_prontos/pc_2000/index.html" class="config-link">
               Configuração Básica
               <span class="badge">R$ 2.000</span>
@@ -421,7 +458,7 @@
               <span class="badge">R$ 6.300</span>
             </a>
 
-            <a href="/pcs_prontos/pc_7000/index.html" class="config-link"  id="selecionar-componentes">
+            <a href="/pcs_prontos/pc_7000/index.html" class="config-link" id="selecionar-componentes">
               Configuração AM5 Premium
               <span class="badge">R$ 6.900</span>
             </a>
@@ -454,7 +491,7 @@
         <option value="7000">R$ 7000</option>
       </select>
     </div>
-    <a href="javascript:void(0);" class="buy-btn" ></a>
+    <a href="javascript:void(0);" class="buy-btn"></a>
   </section>
   <div id="btn-config">Encontrar Configurações></div>
   <section class="blog-highlights">
