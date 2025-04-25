@@ -1,14 +1,15 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="WizardPc - Setup Gamer Perfeito | Componentes High-End">
   <title>WizardPc - Setup Gamer Perfeito</title>
-
+  
+  <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -17,8 +18,10 @@
       --card: #1a1a1a;
       --text: #eaeaea;
       --accent: #1c1c1c;
+      --destaque: #ff3c00;
     }
 
+    /* RESET BASE */
     * {
       margin: 0;
       padding: 0;
@@ -35,6 +38,7 @@
       color: var(--text);
       line-height: 1.7;
       font-size: 18px;
+      padding-top: 160px; /* espaço para header fixo */
     }
 
     a {
@@ -42,6 +46,7 @@
       text-decoration: none;
     }
 
+    /* HEADER */
     .header {
       display: flex;
       justify-content: space-between;
@@ -58,8 +63,12 @@
     .logo img {
       height: 150px;
       width: auto;
+      transition: transform 0.3s;
     }
 
+    .logo:hover img {
+      transform: scale(1.05);
+    }
 
     nav ul {
       display: flex;
@@ -71,44 +80,50 @@
       font-size: 18px;
       padding: 12px 20px;
       border-radius: 8px;
-      transition: background 0.2s;
+      transition: all 0.3s;
+      position: relative;
     }
 
-    nav ul li a:hover {
-      background-color: rgba(255, 255, 255, 0.08);
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.3s;
     }
 
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    /* SEÇÃO HERO */
     .hero-section {
-      padding-top: 350px;
-      scroll-margin-top: 0px;
-      padding-bottom: 180px;
+      padding: 180px 30px 120px;
       text-align: center;
-      padding-left: 30px;
-      padding-right: 30px;
-      background: linear-gradient(to bottom, #0f0f0f, #1a1a1a);
+      background: linear-gradient(to bottom, var(--bg), var(--card));
     }
 
     .hero-section h1 {
-      font-size: 5rem;
+      font-size: 4rem;
       font-weight: 800;
       margin-bottom: 25px;
-      color: var(--primary);
-      text-shadow: 3px 3px 12px rgba(0, 102, 255, 0.5);
+      background: linear-gradient(45deg, var(--primary), #00ddff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
-    .hero-section p.subtitulo {
-      font-size: 2rem;
+    .hero-section .subtitulo {
+      font-size: 1.5rem;
       color: #ccc;
-      margin-bottom: 50px;
       max-width: 800px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 0 auto 50px;
     }
-
 
     .buy-btn {
       display: inline-block;
-      margin-top: 25px;
       background: var(--primary);
       color: #fff;
       padding: 20px 48px;
@@ -123,67 +138,168 @@
       transform: scale(1.05);
     }
 
+    /* OFERTA DA SEMANA */
+    .oferta-semana {
+      background: var(--card);
+      border: 1px solid #333;
+      border-radius: 14px;
+      max-width: 800px;
+      margin: 80px auto;
+      padding: 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
 
+    .oferta-semana::before {
+      content: '🔥 OFERTA RELÂMPAGO';
+      position: absolute;
+      top: 0;
+      right: -30px;
+      background: var(--destaque);
+      color: white;
+      padding: 8px 40px;
+      transform: rotate(45deg);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .oferta-semana img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 10px;
+      margin: 25px 0;
+      border: 1px solid #333;
+    }
+
+    .oferta-semana h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    .oferta-semana h3 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .precos p {
+      margin: 8px 0;
+    }
+
+    .cupom-destaque {
+      color: var(--destaque) !important;
+      font-weight: 700;
+      text-shadow: 0 0 15px rgba(255, 60, 0, 0.3);
+    }
+
+    .info {
+      margin: 15px 0;
+      color: #bbb;
+    }
+
+    .botao-comprar {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--destaque) !important;
+      color: white !important;
+      padding: 15px 35px;
+      border-radius: 8px;
+      font-weight: 700;
+      margin-top: 20px;
+      transition: all 0.3s;
+    }
+
+    .botao-comprar:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(255, 60, 0, 0.3);
+    }
+
+    /* FEATURES GRID */
     .features-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-      gap: 40px;
-      max-width: 1300px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
       margin: 80px auto;
       padding: 0 30px;
     }
 
     .component-card {
       background: var(--card);
+      padding: 30px;
+      border-radius: 14px;
+      border: 1px solid #333;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .component-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .config-container {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .config-link {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      margin: 15px 0;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid #333;
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+
+    .config-link:hover {
+      border-color: var(--primary);
+      background: rgba(0, 102, 255, 0.05);
+    }
+
+    .badge {
+      background: var(--primary);
+      color: #fff;
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    /* SELEÇÃO DE COMPONENTES */
+    #selecionar-componentes {
+      max-width: 800px;
+      margin: 80px auto;
+      background: var(--card);
       padding: 40px;
       border-radius: 14px;
       border: 1px solid #333;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    #selecionar-componentes p {
+      margin-bottom: 10px;
     }
 
-
-    .component-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 0 25px rgba(0, 102, 255, 0.15);
-    }
-
-    .component-card h3 {
-      font-size: 1.8rem;
-      margin-bottom: 15px;
-    }
-
-    .cta-banner {
-      background: var(--accent);
-      margin: 80px auto;
-      padding: 60px 40px;
-      max-width: 900px;
-      border-radius: 14px;
-      text-align: center;
-      border: 1px solid #333;
-    }
-
-    .cta-banner h2 {
-      font-size: 2.5rem;
-      margin-bottom: 30px;
-    }
-
-    select {
+    #selecionar-componentes select {
       background: #1c1c1c;
-      color: var(--primary);
+      color: var(--text);
       border: 1px solid #333;
       padding: 14px 24px;
       border-radius: 10px;
       font-size: 18px;
+      margin-bottom: 30px;
+      width: 100%;
+    }
+
+    #btn-config {
+      cursor: pointer;
       margin-top: 10px;
     }
 
+    /* BLOG HIGHLIGHTS */
     .blog-highlights {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
@@ -193,147 +309,72 @@
       padding: 0 30px;
     }
 
+    /* FOOTER */
     footer {
       text-align: center;
       padding: 50px 20px;
       border-top: 1px solid #333;
       color: #888;
-      font-size: 16px;
+      margin-top: 100px;
     }
 
-    #selecionar-componentes {
-      scroll-margin-top: 210px;
+    footer p + p {
+      margin-top: 10px;
     }
 
-
+    /* RESPONSIVIDADE */
     @media (max-width: 768px) {
       .header {
-        padding: 10px 15px;
-        gap: 8px;
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
       }
 
       .logo img {
-        height: 40px;
+        height: 100px;
       }
-
 
       nav ul {
-        gap: 6px;
-      }
-
-      nav ul li a {
-        font-size: 13px;
-        padding: 6px 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
       }
 
       .hero-section {
-        padding-top: 200px;
-        scroll-margin-top: 300px;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding: 140px 20px 80px;
       }
 
       .hero-section h1 {
-        font-size: clamp(3rem, 5vw, 3rem);
+        font-size: 2.5rem;
       }
 
-
-      .hero-section p.subtitulo {
-        font-size: clamp(1rem, 4vw, 1.5rem);
-      }
-
-      .buy-btn {
-        padding: 14px 28px;
-        font-size: 1rem;
-      }
-
-      .features-grid,
-      .blog-highlights {
-        grid-template-columns: 1fr;
-        padding: 0 15px;
-      }
-
-      .cta-banner {
+      .oferta-semana {
+        margin: 40px 20px;
         padding: 30px 20px;
       }
 
-      .cta-banner h2 {
-        font-size: 1.8rem;
+      .oferta-semana::before {
+        font-size: 0.7rem;
+        right: -35px;
+        padding: 6px 35px;
       }
 
-      .combo-banner {
-        padding: 20px;
-        text-align: center;
-      }
-
-      .combo-banner div {
-        text-align: center !important;
-      }
-
-      .config-container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 2rem;
-        text-align: center;
-        /* Adicionado */
-      }
-
-      .config-link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        /* Alterado para coluna */
-        text-align: center;
-        /* Adicionado */
-        padding: 1.5rem;
-        margin: 1rem 0;
-      }
-
-      .badge {
-        margin: 10px 0 0 0 !important;
-        /* Ajuste de margem */
-      }
-
-      .component-card h3,
-      .component-card p {
-        text-align: center;
-      }
-
-      .combo-banner {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-
-      #btn-config {
-        padding: 14px 24px;
-        background-color: var(--primary);
-        color: white;
-        border-radius: 10px;
-        font-weight: bold;
-        cursor: pointer;
-        display: inline-block;
-        transition: background 0.3s, transform 0.2s;
-      }
-
-      #btn-config:hover {
-        background: #004dcc;
-        transform: scale(1.05);
+      .features-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
       }
 
       #selecionar-componentes {
-        scroll-margin-top: 100px;
+        margin: 40px 20px;
+        padding: 30px 20px;
       }
-
-
     }
   </style>
 </head>
 
 <body>
-
-  <div class="header">
+  <!-- HEADER -->
+  <header class="header">
     <div class="logo">
       <a href="/">
         <img src="/images/logo.png" alt="Wizard PC Logo">
@@ -342,215 +383,99 @@
     <nav>
       <ul>
         <li><a href="/pcs_prontos">PCs Prontos</a></li>
-        <li><a href="/peças/index.html">Componentes recomendados</a></li>
+        <li><a href="/peças/index.html">Componentes</a></li>
         <li><a href="#reviews">Reviews</a></li>
         <li><a href="#blog">Blog</a></li>
       </ul>
     </nav>
-  </div>
+  </header>
 
+  <!-- HERO -->
   <section class="hero-section">
     <h1>Construa o PC dos Sonhos</h1>
-    <p class="subtitulo">Monte sua máquina ideal com as melhores peças do mercado</p>
+    <p class="subtitulo">Monte sua máquina ideal com componentes de última geração</p>
     <a href="#selecionar-componentes" class="buy-btn">Começar Agora</a>
   </section>
 
-  <div class="component-card">
-    <h3>🔥 Ofertas da Semana</h3>
-    <p>Encontre aqui as melhores ofertas em peças selecionadas.</p>
-    <section class="cta-banner combo-banner" id="combo-imperdivel"
-      style="display: flex; flex-wrap: wrap; gap: 40px; align-items: center; justify-content: center; background: linear-gradient(to right, #0f0f0f, #1a1a1a); color: #eaeaea; border-radius: 14px; padding: 40px; max-width: 1100px; margin: 80px auto; border: 1px solid #333;">
-      <div style="flex: 1; min-width: 280px;">
-        <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 10px; color: #0066ff;">🔥 Combo Imperdível!</h2>
-        <p style="font-size: 16px;">Kit com <strong>i5-12400F + Placa-mãe H610 + 32GB DDR4</strong> por um preço que
-          vale cada centavo!</p>
-        <p style="font-size: 15px; margin-top: 8px;">Ideal para quem quer máximo desempenho em produtividade e games.
-        </p>
-        <a href="https://amzn.to/4cmjZTc" target="_blank" rel="noopener noreferrer"
-          style="display: inline-block; margin-top: 16px; background: #0066ff; color: white; padding: 14px 28px; border-radius: 12px; font-weight: bold; text-decoration: none; transition: background 0.3s, transform 0.2s;">
-          Ver no site 🔗
-        </a>
-      </div>
-      <div style="flex: 1; min-width: 280px; text-align: center;">
-        <img src="https://m.media-amazon.com/images/I/61I3qQ7JZsL._AC_SL1080_.jpg" alt="Combo i5 + H610 + DDR4"
-          style="max-width: 100%; border-radius: 12px; box-shadow: 0 0 20px rgba(0, 102, 255, 0.2);">
-      </div>
-    </section>
+  <!-- OFERTA DA SEMANA -->
+  <div class="oferta-semana">
+    <h2>Placa de Vídeo RX 7600 XFX</h2>
+    <a href="[LINK_MERCADO_LIVRE]" target="_blank" rel="noopener">
+      <img src="https://http2.mlstatic.com/D_NQ_NP_983935-MLU79311757309_092024-O.webp" alt="RX 7600 XFX">
+    </a>
+    <h3>AMD Radeon RX 7600 8GB GDDR6</h3>
+    
+    <div class="precos">
+      <p>🎮 De: <s>R$ 1.999</s></p>
+      <p>🚀 Por: <strong>R$ 1.699</strong></p>
+      <p>💡 Cupom: <span class="cupom-destaque">PROMO15OFF</span></p>
+      <p>💰 Economize: R$ 300</p>
+    </div>
+
+    <p class="info">⏳ Promoção válida por tempo limitado</p>
+    
+    <a href="https://www.mercadolivre.com.br/placa-grafica-amd-radeon-xfx-rx-7600-de-8-gb/p/MLB28570288#reco_backend=item_decorator&reco_client=home_affiliate-profile&reco_item_pos=0&source=affiliate-profile&reco_backend_type=function&reco_id=998c21d5-6e66-4ff1-b612-70fbf485eaad&tracking_id=b5831bd8-1c14-42e5-9da3-0d3e47676b4b&c_id=/home/card-featured/element&c_uid=0c4b5a03-aab1-473c-bde9-6b8f77d1bd81" class="botao-comprar" target="_blank" rel="noopener">
+      COMPRAR AGORA →
+    </a>
   </div>
 
-  <div class="component-card">
-    <h3>⭐ Top Builds</h3>
-    <p>Veja as configurações mais populares entre gamers e criadores.</p>
-
-
-    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Configurações de PC Gamer</title>
-      <style>
-        :root {
-          --cor-primaria: #007bff;
-          --cor-secundaria: #00a6ff;
-          --fundo-escuro: #0f0f0f;
-        }
-
-        body {
-          margin: 0;
-          padding: 0;
-          background: var(--fundo-escuro);
-          color: #e0e0e0;
-          font-family: 'Segoe UI', system-ui, sans-serif;
-          min-height: 100vh;
-          text-align: center;
-        }
-
-        .header {
-          background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
-          padding: 2rem;
-          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-          margin-bottom: 3rem;
-        }
-
-        .title {
-          font-size: 2.5rem;
-          color: #fff;
-          margin: 0 0 1rem 0;
-        }
-
-        .config-container {
-          max-width: 800px;
-          margin: 0 auto;
-          padding: 2rem;
-        }
-
-        .config-link {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding: 1.5rem;
-          margin: 1rem 0;
-          background: rgba(255, 255, 255, 0.05);
-          border: 1px solid #444;
-          border-radius: 12px;
-          color: var(--cor-primaria);
-          text-decoration: none;
-          font-size: 1.2rem;
-          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .config-link:hover {
-          background: rgba(0, 123, 255, 0.1);
-          transform: translateY(-3px);
-          box-shadow: 0 0 15px rgba(0, 123, 255, 0.2);
-        }
-
-        .badge {
-          background: var(--cor-primaria);
-          color: #fff;
-          padding: 0.3rem 0.8rem;
-          border-radius: 20px;
-          font-size: 0.9rem;
-          margin-left: 1rem;
-          box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
-        }
-
-        .back-btn {
-          margin-top: 20px;
-          padding: 10px 20px;
-          background-color: var(--cor-primaria);
-          color: #fff;
-          text-decoration: none;
-          border-radius: 5px;
-          font-size: 1rem;
-          transition: background-color 0.3s ease;
-        }
-
-        .back-btn:hover {
-          background-color: #0056b3;
-        }
-
-        @media (max-width: 768px) {
-          .config-container {
-            padding: 1rem;
-          }
-
-          .config-link {
-            flex-direction: column;
-            padding: 1.2rem;
-            text-align: center;
-          }
-
-          .badge {
-            margin: 0.5rem 0 0 0;
-          }
-        }
-      </style>
-    </head>
-
-    <body>
-
+  <!-- TOP BUILDS -->
+  <div class="features-grid">
+    <div class="component-card">
+      <h3>⭐ Top Builds</h3>
       <div class="config-container">
-        <a href="/pcs_prontos/pc_2000/index.html" class="config-link">
+        <a href="/pcs_prontos/pc_2000" class="config-link">
           Configuração Básica
           <span class="badge">R$ 2.000</span>
         </a>
-
-        <a href="/pcs_prontos/pc_3000/index.html" class="config-link">
+        <a href="/pcs_prontos/pc_3000" class="config-link">
           Configuração Intermediária
           <span class="badge">R$ 3.000</span>
         </a>
-
-        <a href="/pcs_prontos/pc_4000/index.html" class="config-link">
-          Configuração Custo X benfício
+        <a href="/pcs_prontos/pc_4000" class="config-link">
+          Custo X Benefício
           <span class="badge">R$ 4.000</span>
         </a>
-
-        <a href="/pcs_prontos/pc_5000/index.html" class="config-link">
-          Configuração avançada
-          <span class="badge">R$ 5.000 - 5400</span>
+        <a href="/pcs_prontos/pc_5000" class="config-link">
+          Avançada
+          <span class="badge">R$ 5.200</span>
         </a>
-
-        <a href="/pcs_prontos/pc_6000/index.html" class="config-link">
-          Configuração AM5 avançada
-          <span class="badge">R$ 6.300 - 6500</span>
+        <a href="/pcs_prontos/pc_6000" class="config-link">
+          AM5 Avançada
+          <span class="badge">R$ 6.300</span>
         </a>
-
-        <a href="/pcs_prontos/pc_7000/index.html" class="config-link">
-          Configuração AM5 Premium
-          <span class="badge">R$ 7400</span>
+        <a href="/pcs_prontos/pc_7000" class="config-link">
+          AM5 Premium
+          <span class="badge">R$ 7.400</span>
         </a>
       </div>
-    </body>
-
-
+    </div>
   </div>
 
+  <!-- SELEÇÃO DE COMPONENTES -->
+  <section id="selecionar-componentes">
+    <h2 style="text-align:center; margin-bottom:30px;">Encontre o PC Ideal</h2>
+    <p>Uso principal:</p>
+    <select id="uso-principal">
+      <option value="jogos">Jogos</option>
+      <option value="edicao-video">Edição de Vídeo</option>
+      <option value="streaming">Streaming</option>
+    </select>
 
+    <p>Orçamento:</p>
+    <select id="orcamento">
+      <option value="2000">R$ 2000</option>
+      <option value="3000">R$ 3000</option>
+      <option value="4000">R$ 4000</option>
+      <option value="5000">R$ 5000</option>
+      <option value="6000">R$ 6000</option>
+      <option value="7000">R$ 7000</option>
+    </select>
 
-  <section id="selecionar-componentes" class="cta-banner">
-    <h2>Encontre o PC Ideal</h2>
-    <div style="margin-bottom: 20px;">
-      <p>Uso principal:</p>
-      <select id="uso-principal">
-        <option value="jogos">Jogos</option>
-        <option value="edicao-video">Edição de Vídeo</option>
-        <option value="streaming">Streaming</option>
-      </select>
-    </div>
-    <div style="margin-bottom: 30px;">
-      <p>Orçamento:</p>
-      <select id="orcamento">
-        <option value="2000">R$ 2000</option>
-        <option value="3000">R$ 3000</option>
-        <option value="4000">R$ 4000</option>
-        <option value="5000">R$ 5000</option>
-        <option value="6000">R$ 6000</option>
-        <option value="7000">R$ 7000</option>
-      </select>
-    </div>
     <div id="btn-config" class="buy-btn">Encontrar Configurações</div>
   </section>
 
+  <!-- BLOG & REVIEWS -->
   <section class="blog-highlights">
     <article class="component-card" id="reviews">
       <h3>Último Review: RX 9070</h3>
@@ -560,27 +485,23 @@
     <article class="component-card" id="blog">
       <h3>Melhores teclados 2025</h3>
       <p>Créditos: Poisonstp — vídeo completo com recomendações top.</p>
-      <a href="https://www.youtube.com/watch?v=TiQEXTFVB4U" class="buy-btn">Ver vídeo</a>
+      <a href="https://www.youtube.com/watch?v=TiQEXTFVB4U" class="buy-btn" target="_blank" rel="noopener">Ver vídeo</a>
     </article>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <p>© 2025 WizardPc. Todos os direitos reservados.</p>
-    <p style="font-size: 14px; color: #666;">Vídeos incorporados pertencem aos seus respectivos criadores.</p>
+    <p style="font-size: 14px; margin-top: 15px;">Vídeos incorporados pertencem aos seus respectivos criadores.</p>
   </footer>
 
-
+  <!-- SCRIPTS -->
   <script>
     document.getElementById("btn-config").addEventListener("click", function () {
       const usoPrincipal = document.getElementById("uso-principal").value;
       const orcamento = document.getElementById("orcamento").value;
-      let url = "/pcs_prontos/pc_" + orcamento + "/index.html";
-      window.location.href = url;
+      window.location.href = `/pcs_prontos/pc_${orcamento}/index.html`;
     });
   </script>
-
-
-
 </body>
-
 </html>

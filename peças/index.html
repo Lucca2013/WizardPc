@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PCBuilder - Top 24 Componentes</title>
     <!-- SEO Adicional -->
-    <meta name="keywords"
-        content="PC Gamer, Montar PC, Componentes PC, Hardware, Processador, Placa de vídeo, SSD, Fonte">
+    <meta name="keywords" content="PC Gamer, Montar PC, Componentes PC, Hardware, Processador, Placa de vídeo, SSD, Fonte">
     <meta name="author" content="WizardPc">
 
     <!-- Open Graph -->
@@ -67,8 +66,6 @@
             flex-direction: column;
             min-height: 520px;
             overflow: hidden;
-            opacity: 1;
-            transform: scale(1);
         }
 
         .componente-card.hidden {
@@ -80,9 +77,6 @@
             transition: all 0.3s ease;
         }
 
-
-
-
         .componente-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 0 30px rgba(0, 243, 255, 0.3);
@@ -92,7 +86,6 @@
             height: 200px;
             margin: -20px -20px 15px -20px;
             overflow: hidden;
-            position: relative;
             border-bottom: var(--borda-neon);
         }
 
@@ -173,34 +166,35 @@
             box-shadow: 0 0 20px rgba(0, 243, 255, 0.4);
         }
 
+        .back-btn-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
         .back-btn {
-            margin-top: 20px;
             padding: 10px 20px;
             background: var(--gradiente-neon);
             color: #000;
             text-decoration: none;
             border-radius: 5px;
             font-size: 1rem;
-            transition: background-color 0.3s ease;
+            transition: opacity 0.3s ease;
         }
 
         .back-btn:hover {
             opacity: 0.9;
         }
 
-        .back-btn-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
         .filtros-container {
             margin-bottom: 30px;
-            padding: 0 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .search-bar {
-            width: 100%;
+            flex: 1 1 100%;
             padding: 12px 20px;
             margin-bottom: 20px;
             background: rgba(15, 15, 15, 0.95);
@@ -232,7 +226,6 @@
             transition: all 0.3s ease;
         }
 
-        .tag-btn:hover,
         .tag-btn.active {
             background: var(--gradiente-neon);
             color: #000;
@@ -277,25 +270,63 @@
                 <button class="tag-btn" data-category="Fonte">Fonte</button>
                 <button class="tag-btn" data-category="Gabinete">Gabinete</button>
                 <button class="tag-btn" data-category="Monitor">Monitor</button>
+                <button class="tag-btn" data-category="Placa de vídeo">Placa de Vídeo</button>
             </div>
         </div>
 
         <div class="lista-componentes">
 
-            <!-- Processador (5 cards) -->
+            <!-- Placas de Vídeo -->
             <div class="componente-card">
                 <div class="componente-imagem-container">
-                    <img src="images/ryzen7600.png" alt="AMD Ryzen 5 7600" class="componente-imagem">
+                    <img src="images/rx7600.png"
+                         alt="XFX RX 7600" class="componente-imagem">
+                </div>
+                <div class="componente-categoria">Placa de vídeo</div>
+                <h3 class="componente-titulo">XFX Radeon RX 7600 8GB</h3>
+                <ul class="componente-especs">
+                    <li>8GB GDDR6</li>
+                    <li>Clock Boost: 2755 MHz</li>
+                    <li>PCI Express 4.0</li>
+                    <li>Compatível com Ray Tracing</li>
+                </ul>
+                <div class="componente-preco">R$ 1.699,00</div>
+                <a href="https://www.mercadolivre.com.br/placa-grafica-amd-radeon-xfx-rx-7600-de-8-gb/p/MLB28570288"
+                   class="botao-comprar" target="_blank" rel="noopener">Ver Oferta</a>
+            </div>
+
+            <div class="componente-card">
+                <div class="componente-imagem-container">
+                    <img src="images/rx6750xt.png"
+                         alt="XFX RX 6750 XT" class="componente-imagem">
+                </div>
+                <div class="componente-categoria">Placa de vídeo</div>
+                <h3 class="componente-titulo">XFX Radeon RX 6750 XT 12GB</h3>
+                <ul class="componente-especs">
+                    <li>12GB GDDR6</li>
+                    <li>Clock Boost: 2623 MHz</li>
+                    <li>PCI Express 4.0</li>
+                    <li>Ray Tracing e FidelityFX</li>
+                </ul>
+                <div class="componente-preco">R$ 2.599,99</div>
+                <a href="https://www.kabum.com.br/produto/528811/placa-de-video-rx-6750xt-gaming-xfx-graphics-card-amd-radeon-12gb-gddr6-ray-tracing-fidelity-fx-rx-675tmbaf9?utm_id=22429436057&gad_source=1&gbraid=0AAAAADx-HyFhjKUuWOOjAw8cKc_rNsfeR&gclid=Cj0KCQjw5azABhD1ARIsAA0WFUE8gpbqbq16C6H2g0J7SCETOdluyqQieVK_FudQwlT5gOs0YhEs7lwaAtViEALw_wcB"
+                   class="botao-comprar" target="_blank" rel="noopener">Ver Oferta</a>
+            </div>
+
+            <!-- Processadores -->
+            <div class="componente-card">
+                <div class="componente-imagem-container">
+                    <img src="images/ryzen7600.png" alt="AMD Ryzen 5 7600X" class="componente-imagem">
                 </div>
                 <div class="componente-categoria">Processador</div>
-                <h3 class="componente-titulo">AMD Ryzen 5 7600</h3>
+                <h3 class="componente-titulo">AMD Ryzen 5 7600X</h3>
                 <ul class="componente-especs">
                     <li>6 Núcleos / 12 Threads</li>
                     <li>5.2 GHz Boost</li>
                     <li>Socket AM5</li>
                 </ul>
-                <div class="componente-preco">R$ 1.409,99</div>
-                <a href="https://amzn.to/3QX3jb9" class="botao-comprar">Ver na Amazon</a>
+                <div class="componente-preco">R$ 1.539,98</div>
+                <a href="https://amzn.to/3YRetT5" class="botao-comprar">Ver na Amazon</a>
             </div>
 
             <div class="componente-card">
@@ -306,7 +337,7 @@
                 <h3 class="componente-titulo">Intel Core i5-14600K</h3>
                 <ul class="componente-especs">
                     <li>14 Núcleos / 20 Threads</li>
-                    <li>velocidade da CPU: 3.5 GHz</li>
+                    <li>Velocidade: 3.5 GHz</li>
                     <li>Socket: LGA 1700</li>
                 </ul>
                 <div class="componente-preco">R$ 1.629,00</div>
@@ -320,8 +351,8 @@
                 <div class="componente-categoria">Processador</div>
                 <h3 class="componente-titulo">AMD Ryzen 5 8600G</h3>
                 <ul class="componente-especs">
-                    <li>Grafico integrado MUITO potente (equivalnete a uma GTX 1660S)</li>
-                    <li>Velocidade da CPU: 4,3 GHz</li>
+                    <li>Gráfico integrado potente</li>
+                    <li>Velocidade: 4.3 GHz</li>
                     <li>Socket AM5</li>
                 </ul>
                 <div class="componente-preco">R$ 1.119,98</div>
@@ -335,8 +366,8 @@
                 <div class="componente-categoria">Processador</div>
                 <h3 class="componente-titulo">AMD Ryzen 5 5600GT</h3>
                 <ul class="componente-especs">
-                    <li>Custo X benefício</li>
-                    <li>Graficos integrados decentes mas também aguenta GPUs fortes</li>
+                    <li>Custo-benefício</li>
+                    <li>Gráficos integrados decentes</li>
                     <li>Socket AM4</li>
                 </ul>
                 <div class="componente-preco">R$ 907,50</div>
@@ -351,14 +382,14 @@
                 <h3 class="componente-titulo">AMD Ryzen 7 5700X</h3>
                 <ul class="componente-especs">
                     <li>8 Núcleos / 16 Threads</li>
-                    <li>Melhor opção para melhor desempenho em AM4</li>
+                    <li>Desempenho AM4</li>
                     <li>Socket AM4</li>
                 </ul>
                 <div class="componente-preco">R$ 999,00</div>
                 <a href="https://amzn.to/4lrYrZJ" class="botao-comprar">Ver na Amazon</a>
             </div>
 
-            <!-- Water Cooler (5 cards) -->
+            <!-- Water Coolers -->
             <div class="componente-card">
                 <div class="componente-imagem-container">
                     <img src="images/WaterMancer.png" alt="Mancer Mystic G1" class="componente-imagem">
@@ -376,15 +407,14 @@
 
             <div class="componente-card">
                 <div class="componente-imagem-container">
-                    <img src="images/KalkanDelta360.png" alt="Water Cooler Gamer Kalkan Delta 360"
-                        class="componente-imagem">
+                    <img src="images/KalkanDelta360.png" alt="Water Cooler Gamer Kalkan Delta 360" class="componente-imagem">
                 </div>
                 <div class="componente-categoria">Water Cooler</div>
-                <h3 class="componente-titulo">Water Cooler Gamer Kalkan Delta 360</h3>
+                <h3 class="componente-titulo">Kalkan Delta 360</h3>
                 <ul class="componente-especs">
                     <li>360mm Radiador</li>
                     <li>RGB Personalizável</li>
-                    <li>Bomba com efeito 'espelho infinito' ARGB</li>
+                    <li>Efeito espelho infinito</li>
                 </ul>
                 <div class="componente-preco">R$ 520,00</div>
                 <a href="https://amzn.to/4jv1IFU" class="botao-comprar">Ver na Amazon</a>
@@ -399,7 +429,7 @@
                 <ul class="componente-especs">
                     <li>240mm Radiador</li>
                     <li>Efeito RGB</li>
-                    <li>ARGB configuravel</li>
+                    <li>ARGB configurável</li>
                 </ul>
                 <div class="componente-preco">R$ 338,96</div>
                 <a href="https://amzn.to/3YpgV32" class="botao-comprar">Ver na Amazon</a>
@@ -420,7 +450,7 @@
                 <a href="https://amzn.to/4ctbPsx" class="botao-comprar">Ver na Amazon</a>
             </div>
 
-            <!-- Placa-mãe (5 cards) -->
+            <!-- Placas-mãe -->
             <div class="componente-card">
                 <div class="componente-imagem-container">
                     <img src="images/B650M.png" alt="Gigabyte B650M" class="componente-imagem">
@@ -429,7 +459,7 @@
                 <h3 class="componente-titulo">Gigabyte B650M</h3>
                 <ul class="componente-especs">
                     <li>Chipset B650</li>
-                    <li>Suporta AMD AM5</li>
+                    <li>Suporte AM5</li>
                     <li>DDR5</li>
                 </ul>
                 <div class="componente-preco">R$ 1.051,90</div>
@@ -443,9 +473,9 @@
                 <div class="componente-categoria">Placa mãe</div>
                 <h3 class="componente-titulo">AsRock A520M</h3>
                 <ul class="componente-especs">
-                    <li>Placa mãe baratinha para builds de entrada, recomendavel fazer upgrade no futuro</li>
+                    <li>Para builds de entrada</li>
                     <li>DDR4</li>
-                    <li>Compatível com AMD AM4</li>
+                    <li>Compatível AM4</li>
                 </ul>
                 <div class="componente-preco">R$ 1.299,99</div>
                 <a href="https://amzn.to/4jmQ0gc" class="botao-comprar">Ver na Amazon</a>
@@ -458,10 +488,9 @@
                 <div class="componente-categoria">Placa mãe</div>
                 <h3 class="componente-titulo">Gigabyte B550M</h3>
                 <ul class="componente-especs">
-                    <li>Placa-mãe robusta para soquete AM4, ideal para combinar com processadores potentes da linha
-                        Ryzen AM4</li>
-                    <li>AMD AM4</li>
-                    <li>suporte a 4X DDR4 (MÁX 128GB)</li>
+                    <li>Soquete AM4</li>
+                    <li>4x DDR4</li>
+                    <li>Suporte até 128GB</li>
                 </ul>
                 <div class="componente-preco">R$ 1.399,99</div>
                 <a href="https://amzn.to/4javTlX" class="botao-comprar">Ver na Amazon</a>
@@ -474,15 +503,15 @@
                 <div class="componente-categoria">Placa mãe</div>
                 <h3 class="componente-titulo">Asus PRIME Z790</h3>
                 <ul class="componente-especs">
-                    <li>Ideal para combar com o i5-14600K</li>
+                    <li>Compatível i5-14600K</li>
                     <li>4x DDR5</li>
-                    <li>Suporte para Soquete LGA1700</li>
+                    <li>Socket LGA1700</li>
                 </ul>
                 <div class="componente-preco">R$ 1.470,00</div>
                 <a href="https://amzn.to/4jvMdNY" class="botao-comprar">Ver na Amazon</a>
             </div>
 
-            <!-- Memória RAM (5 cards) -->
+            <!-- Memória RAM -->
             <div class="componente-card">
                 <div class="componente-imagem-container">
                     <img src="images/16-Gb-Kingston.png" alt="FURY 16 GB" class="componente-imagem">
@@ -543,7 +572,7 @@
                 <a href="https://amzn.to/42uFk8D" class="botao-comprar">Ver na Amazon</a>
             </div>
 
-            <!-- Armazenamento (5 cards) -->
+            <!-- Armazenamento -->
             <div class="componente-card">
                 <div class="componente-imagem-container">
                     <img src="images/BlueSsd.png" alt="Kingston NV3 1TB" class="componente-imagem">
@@ -552,8 +581,8 @@
                 <h3 class="componente-titulo">Kingston NV3 1TB</h3>
                 <ul class="componente-especs">
                     <li>NVMe SSD</li>
-                    <li>NVMe</li>
                     <li>Desempenho extremo</li>
+                    <li>Leitura 3500MB/s</li>
                 </ul>
                 <div class="componente-preco">R$ 435,99</div>
                 <a href="https://amzn.to/4iSxzQS" class="botao-comprar">Ver na Amazon</a>
@@ -568,7 +597,7 @@
                 <ul class="componente-especs">
                     <li>NVMe SSD</li>
                     <li>Leitura 6000 MB/s</li>
-                    <li>Desempenho extremo</li>
+                    <li>Escrita 5000 MB/s</li>
                 </ul>
                 <div class="componente-preco">R$ 899,89</div>
                 <a href="https://amzn.to/4cv8WHn" class="botao-comprar">Ver na Amazon</a>
@@ -583,14 +612,13 @@
                 <ul class="componente-especs">
                     <li>NVMe SSD</li>
                     <li>Leitura 3500MB/s</li>
-                    <li>Desempenho extremo</li>
+                    <li>Escrita 2100MB/s</li>
                 </ul>
                 <div class="componente-preco">R$ 306,90</div>
                 <a href="https://amzn.to/4cFookr" class="botao-comprar">Ver na Amazon</a>
             </div>
 
-
-            <!-- Fonte (5 cards) -->
+            <!-- Fontes -->
             <div class="componente-card">
                 <div class="componente-imagem-container">
                     <img src="images/Fonte850W.png" alt="MSI MAG A850GL" class="componente-imagem">
@@ -599,8 +627,8 @@
                 <h3 class="componente-titulo">MSI MAG A850GL</h3>
                 <ul class="componente-especs">
                     <li>850W</li>
-                    <li>80 Plus gold</li>
-                    <li>Branca</li>
+                    <li>80 Plus Gold</li>
+                    <li>Modular</li>
                 </ul>
                 <div class="componente-preco">R$ 829,00</div>
                 <a href="https://amzn.to/4i49PrN" class="botao-comprar">Ver na Amazon</a>
@@ -615,7 +643,7 @@
                 <ul class="componente-especs">
                     <li>750W</li>
                     <li>80 Plus Bronze</li>
-                    <li>Preta</li>
+                    <li>Semi-modular</li>
                 </ul>
                 <div class="componente-preco">R$ 489,00</div>
                 <a href="https://amzn.to/3E6Ik31" class="botao-comprar">Ver na Amazon</a>
@@ -630,13 +658,13 @@
                 <ul class="componente-especs">
                     <li>500W</li>
                     <li>80 Plus Bronze</li>
-                    <li>Preto</li>
+                    <li>Não modular</li>
                 </ul>
                 <div class="componente-preco">R$ 264,90</div>
                 <a href="https://amzn.to/42IhF5R" class="botao-comprar">Ver na Amazon</a>
             </div>
 
-            <!-- Gabinete (5 cards) -->
+            <!-- Gabinetes -->
             <div class="componente-card">
                 <div class="componente-imagem-container">
                     <img src="images/GabineteBrancoReddragon.png" alt="Redragon Wideload Pro" class="componente-imagem">
@@ -654,14 +682,13 @@
 
             <div class="componente-card">
                 <div class="componente-imagem-container">
-                    <img src="images/gabinete-4fans-branco.png" alt="Gabinete Gamer Aquário em Vidro Com 4 Fans RGB"
-                        class="componente-imagem">
+                    <img src="images/gabinete-4fans-branco.png" alt="Gabinete Gamer Aquário em Vidro Com 4 Fans RGB" class="componente-imagem">
                 </div>
                 <div class="componente-categoria">Gabinete</div>
-                <h3 class="componente-titulo">Gabinete Gamer Aquário em Vidro Com 4 Fans RGB</h3>
+                <h3 class="componente-titulo">Gabinete Aquário 4 Fans RGB</h3>
                 <ul class="componente-especs">
-                    <li>Gabinete aquário</li>
-                    <li>Acompanha 4 Fans</li>
+                    <li>Vidro temperado</li>
+                    <li>4 Fans incluídos</li>
                     <li>Branco</li>
                 </ul>
                 <div class="componente-preco">R$ 318,00</div>
@@ -670,20 +697,20 @@
 
             <div class="componente-card">
                 <div class="componente-imagem-container">
-                    <img src="images/gabinete-4fans-preto.png" alt="Gabinete Gamer Aquário em Vidro Com 4 Fans RGB"
-                        class="componente-imagem">
+                    <img src="images/gabinete-4fans-preto.png" alt="Gabinete Gamer Aquário em Vidro Com 4 Fans RGB" class="componente-imagem">
                 </div>
                 <div class="componente-categoria">Gabinete</div>
-                <h3 class="componente-titulo">Gabinete Gamer Aquário em Vidro Com 4 Fans RGB</h3>
+                <h3 class="componente-titulo">Gabinete Aquário 4 Fans RGB</h3>
                 <ul class="componente-especs">
-                    <li>Gabinete aquário</li>
-                    <li>Acompanha 4 Fans</li>
+                    <li>Vidro temperado</li>
+                    <li>4 Fans incluídos</li>
                     <li>Preto</li>
                 </ul>
                 <div class="componente-preco">R$ 355,00</div>
                 <a href="https://amzn.to/3RiIG9D" class="botao-comprar">Ver na Amazon</a>
             </div>
-            <!-- Monitor (5 cards) -->
+
+            <!-- Monitores -->
             <div class="componente-card">
                 <div class="componente-imagem-container">
                     <img src="images/MonitorSamsungOdyssey.png" alt="Samsung Odyssey G3" class="componente-imagem">
@@ -691,9 +718,9 @@
                 <div class="componente-categoria">Monitor</div>
                 <h3 class="componente-titulo">Samsung Odyssey G3</h3>
                 <ul class="componente-especs">
-                    <li>27"</li>
-                    <li>180Hz, 1ms</li>
-                    <li>Custo x Benefício</li>
+                    <li>27" Full HD</li>
+                    <li>144Hz</li>
+                    <li>1ms</li>
                 </ul>
                 <div class="componente-preco">R$ 1.026,95</div>
                 <a href="https://amzn.to/3FX6T2T" class="botao-comprar">Ver na Amazon</a>
@@ -725,32 +752,28 @@
             let selectedCategory = null;
 
             function filterComponents() {
-                const searchTerm = searchInput.value.toLowerCase();
+                const term = searchInput.value.toLowerCase();
                 components.forEach(card => {
-                    const category = card.querySelector('.componente-categoria').textContent;
+                    const cat = card.querySelector('.componente-categoria').textContent;
                     const title = card.querySelector('.componente-titulo').textContent.toLowerCase();
-                    const matchesSearch = title.includes(searchTerm) || category.toLowerCase().includes(searchTerm);
-                    const matchesCategory = !selectedCategory || category === selectedCategory;
-                    if (matchesSearch && matchesCategory) {
-                        card.classList.remove('hidden');
-                    } else {
-                        card.classList.add('hidden');
-                    }
+                    const matchSearch = title.includes(term) || cat.toLowerCase().includes(term);
+                    const matchCat = !selectedCategory || cat === selectedCategory;
+                    card.classList.toggle('hidden', !(matchSearch && matchCat));
                 });
             }
 
             searchInput.addEventListener('input', filterComponents);
 
-            filterTags.querySelectorAll('.tag-btn').forEach(button => {
-                button.addEventListener('click', function () {
-                    const category = this.getAttribute('data-category');
-                    if (selectedCategory === category) {
+            filterTags.querySelectorAll('.tag-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const cat = btn.getAttribute('data-category');
+                    if (selectedCategory === cat) {
                         selectedCategory = null;
-                        this.classList.remove('active');
+                        btn.classList.remove('active');
                     } else {
-                        selectedCategory = category;
-                        filterTags.querySelectorAll('.tag-btn').forEach(btn => btn.classList.remove('active'));
-                        this.classList.add('active');
+                        selectedCategory = cat;
+                        filterTags.querySelectorAll('.tag-btn').forEach(b => b.classList.remove('active'));
+                        btn.classList.add('active');
                     }
                     filterComponents();
                 });
@@ -758,5 +781,4 @@
         });
     </script>
 </body>
-
 </html>
