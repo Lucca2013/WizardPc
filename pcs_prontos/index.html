@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PCs Gamer Prontos - WizardPc" />
+  <title>PCs Gamer Prontos | WizardPc</title>
+
+  <!-- Fontes e ícones -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    :root {
+      --bg: #1a1a1a;
+      --card: #333;
+      --text: #111111;
+      --heading: #000000;
+      --border: #000000;
+      --link: #000000;
+      --link-hover: #333333;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      font-size: 18px;
+      line-height: 1.6;
+      padding-top: 120px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background: var(--accent);
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 999;
+      border-bottom: 1px solid #222;
+    }
+
+    .logo img {
+      height: 48px;
+      width: auto;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 24px;
+    }
+
+    nav ul li a {
+      font-size: 16px;
+      padding: 10px 14px;
+      border-radius: 6px;
+      position: relative;
+      transition: all 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: var(--primary);
+    }
+
+    nav ul li a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 0%;
+      height: 2px;
+      background-color: var(--primary);
+      transition: width 0.3s ease;
+    }
+
+    nav ul li a:hover::after {
+      width: 100%;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #00b3b3;
+      font-size: 32px;
+    }
+
+    .build {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      margin-bottom: 30px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .build-header {
+      background: #242424;
+      padding: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .build-header h2 {
+      font-size: 20px;
+      color: #00b3b3;
+      font-weight: 600;
+    }
+
+    .build-body {
+      padding: 16px;
+    }
+
+    .build-body p {
+      margin-bottom: 12px;
+    }
+
+    .build-body a {
+      color: #00b3b3;
+      text-decoration: none;
+    }
+
+    .build-body a:hover {
+      color: #028080;
+      text-decoration: underline;
+    }
+
+    .parts {
+      margin: 16px 0;
+      padding-left: 20px;
+    }
+
+    .parts li {
+      margin-bottom: 6px;
+    }
+
+    .video {
+      margin: 12px 0;
+    }
+
+    .total {
+      font-weight: 600;
+      margin-top: 12px;
+      color: #00b3b3;
+    }
+
+    p,
+    li {
+      color: #ffffff;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="/">
+        <img src="/images/logo.png" alt="Wizard PC Logo" />
+      </a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/pcs_prontos">PCs Prontos</a></li>
+        <li><a href="/componentes/">Componentes</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1>💻 PCs Gamer Prontos 💵</h1>
+
+  <!-- PC 2000 -->
+  <section class="build" id="pc2000">
+    <div class="build-header">
+      <h2>PC GAMER de R$2.000</h2>
+    </div>
+    <div class="build-body">
+      <p>PC Gamer de entrada com ótimo custo‑benefício. Equipado com o Ryzen 5 5600GT (vídeo integrado), roda jogos
+        leves em baixa: GTA V, Valorant, Fortnite. Ideal para iniciantes.</p>
+      <p>Primeiro upgrade recomendado: +8 GB de RAM para melhorar desempenho. Em seguida, adicione uma GPU dedicada para
+        elevar o nível.</p>
+      <p>O processador tem 6 núcleos, bom para multitarefa leve e jogos. Para tarefas mais pesadas, futuramente pode-se
+        migrar para um melhor processador sem trocar placa‑mãe.</p>
+      <p>Se possível, opte por SSD maior (480 GB) para mais espaço.</p>
+      <ul class="parts">
+        <li><strong>Ryzen 5 5600GT</strong> – R$849,98 – <a href="https://amzn.to/3Ym2vAA" target="_blank">link</a></li>
+        <li><strong>AsRock A520M</strong> – R$419,99 – <a href="https://amzn.to/3QRI5LV" target="_blank">link</a></li>
+        <li><strong>Memória RAM 8GB DDR4</strong> – R$158,00 – <a href="https://amzn.to/4idbLOP"
+            target="_blank">link</a></li>
+        <li><strong>SSD WD Green 500GB NVMe M.2</strong> – R$269,89 – <a href="https://amzn.to/4jOIkUd"
+            target="_blank">link</a></li>
+        <li><strong>Fonte 550W 80 Plus</strong> – R$215 – <a href="https://amzn.to/42SfeMW" target="_blank">link</a>
+        </li>
+        <li><strong>Opção 1: Gabinete Branco Com 4 Fans RGB</strong> – R$318,00 – <a href="https://amzn.to/3FJIiye"
+            target="_blank">link</a></li>
+        <li><strong>Opção 2: Gabinete Preto Com 4 Fans RGB</strong> – R$324,00 – <a href="https://amzn.to/446l2EO"
+            target="_blank">link</a></li>
+      </ul>
+      <div class="total">💸 Valor total: R$2.000</div>
+    </div>
+  </section>
+
+  <!-- PC 3000 -->
+  <section class="build" id="pc3000">
+    <div class="build-header">
+      <h2>PC GAMER de R$3.000</h2>
+    </div>
+    <div class="build-body">
+      <p>Setup recomendado por ser baratinho e rodar a maioria dos jogos que a galera gosta</p>
+      <ul class="parts">
+        <li><strong>Ryzen 5 5500</strong> – R$549,99 - <a href="https://amzn.to/4cfA6SE" target="_blank">link</a></li>
+        <li><strong>AsRock A520M</strong> – R$419,99 – <a href="https://amzn.to/3QRI5LV" target="_blank">link</a></li>
+        <li><strong>Memória RAM 16GB (2x8GB)</strong> – R$278,00 – <a href="https://amzn.to/4jsth2A"
+            target="_blank">link</a></li>
+        <li><strong>SSD WD Green 500GB NVMe M.2</strong> – R$269,89 – <a href="https://amzn.to/4jOIkUd"
+            target="_blank">link</a></li>
+        <li><strong>Fonte Gamdias Cyclops 650W</strong> – R$371,80 – <a href="https://amzn.to/4lRzXJm"
+            target="_blank">link</a></li>
+        <li><strong>RX 580 8GB GDDR5</strong> – R$610,33 – <a
+            href="https://pt.aliexpress.com/item/1005007510090793.html" target="_blank">link</a></li>
+        <li><strong>Opção 1: Gabinete Branco Com 4 Fans RGB</strong> – R$318,00 – <a href="https://amzn.to/3FJIiye"
+            target="_blank">link</a></li>
+        <li><strong>Opção 2: Gabinete Preto Com 4 Fans RGB</strong> – R$324,00 – <a href="https://amzn.to/446l2EO"
+            target="_blank">link</a></li>
+      </ul>
+      <div class="total">💸 Valor total: R$3.000</div>
+    </div>
+  </section>
+
+  <!-- PC 4000 -->
+  <section class="build" id="pc4000">
+    <div class="build-header">
+      <h2>PC GAMER de R$4.000</h2>
+    </div>
+    <div class="build-body">
+      <p>Pc muito bom! Já vai rodar jogos pesados por sua GPU forte!</p>
+      <ul class="parts">
+        <li><strong>Ryzen 5 5500</strong> – R$549,99 - <a href="https://amzn.to/4cfA6SE" target="_blank">link</a></li>
+        <li><strong>AsRock A520M</strong> – R$419,99 – <a href="https://amzn.to/3QRI5LV" target="_blank">link</a></li>
+        <li><strong>Memória RAM 16GB (2x8GB)</strong> – R$278,00 – <a href="https://amzn.to/4jsth2A"
+            target="_blank">link</a></li>
+        <li><strong>SSD WD Green 500GB NVMe M.2</strong> – R$269,89 – <a href="https://amzn.to/4jOIkUd"
+            target="_blank">link</a></li>
+        <li><strong>Fonte Gamdias Cyclops 650W</strong> – R$371,80 – <a href="https://amzn.to/4lRzXJm"
+            target="_blank">link</a></li>
+        <li><strong>RX 7600 8GB GDDR6</strong> – R$ 1.799,90 – <a
+            href="https://www.terabyteshop.com.br/produto/25051/placa-de-video-asrock-amd-radeon-rx-7600-challenger-oc-8gb-gddr6-fsr-ray-tracing-90-ga41zz-00uanf?p=458658"
+            target="_blank">link</a></li>
+        <li><strong>Opção 1: Gabinete Branco Com 4 Fans RGB</strong> – R$318,00 – <a href="https://amzn.to/3FJIiye"
+            target="_blank">link</a></li>
+        <li><strong>Opção 2: Gabinete Preto Com 4 Fans RGB</strong> – R$324,00 – <a href="https://amzn.to/446l2EO"
+            target="_blank">link</a></li>
+      </ul>
+      <div class="total">💸 Valor total: R$4.000</div>
+    </div>
+  </section>
+
+  <!-- PC 5000–5400 -->
+  <section class="build" id="pc5000">
+    <div class="build-header">
+      <h2>PC GAMER de R$5.000–5.400</h2>
+    </div>
+    <div class="build-body">
+      <p>Avançado para AAA: Ryzen 5 5600 + RX 6750 XT + 16 GB RAM. Ótimo para multitarefa e jogos em alta qualidade.</p>
+      <ul class="parts">
+        <li><strong>Ryzen 5 5600</strong> – R$808,10 - <a href="https://amzn.to/3Rt0H53" target="_blank">link</a></li>
+        <li><strong>Cooler Deepcool Ag400</strong> – R$152,90 - <a
+            href="https://www.mercadolivre.com.br/cooler-deepcool-ag400-preto-120mm-intel-e-amd/p/MLB33315184?pdp_filters=item_id%3AMLB4034653211&from=gshop&matt_tool=14213447&matt_word=&matt_source=bing&matt_campaign=MLB_ML_BING_AO_CE-ALL-ALL_X_PLA_ALLB_TXS_ALL&matt_campaign_id=382858295&matt_ad_group=CE&matt_match_type=e&matt_network=o&matt_device=c&matt_keyword=default&msclkid=23d316fc0eb5106f8e7b7ee7eb36d93c&utm_source=bing&utm_medium=cpc&utm_campaign=MLB_ML_BING_AO_CE-ALL-ALL_X_PLA_ALLB_TXS_ALL&utm_term=4581596253419784&utm_content=CE"
+            target="_blank">link</a></li>
+        <li><strong>Gigabyte B550M AORUS Elite</strong> – R$829,90 – <a href="https://amzn.to/3XW2jYJ"
+            target="_blank">link</a></li>
+        <li><strong>Memória RAM 32GB (2x16GB) Lembre-se de comprar dois pentes!</strong> – R$550,00 – <a
+            href="https://amzn.to/4l9LHXh" target="_blank">link</a></li>
+        <li><strong>SSD NVMe 1TB</strong> – R$462,00 – <a href="https://amzn.to/4iSxzQS" target="_blank">link</a></li>
+        <li><strong>Fonte Gamdias Cyclops 650W</strong> – R$371,80 – <a href="https://amzn.to/4lRzXJm"
+            target="_blank">link</a></li>
+        <li><strong>RX 7600 8GB GDDR6</strong> – R$ 1.799,90 – <a
+            href="https://www.terabyteshop.com.br/produto/25051/placa-de-video-asrock-amd-radeon-rx-7600-challenger-oc-8gb-gddr6-fsr-ray-tracing-90-ga41zz-00uanf?p=458658"
+            target="_blank">link</a></li>
+        <li><strong>Opção 1: Gabinete Branco Com 4 Fans RGB</strong> – R$318,00 – <a href="https://amzn.to/3FJIiye"
+            target="_blank">link</a></li>
+        <li><strong>Opção 2: Gabinete Preto Com 4 Fans RGB</strong> – R$324,00 – <a href="https://amzn.to/446l2EO"
+            target="_blank">link</a></li>
+      </ul>
+      <div class="total">💸 Valor total: R$5.400</div>
+    </div>
+  </section>
+
+  <!-- PC 6300–6500 -->
+  <section class="build" id="pc6300">
+    <div class="build-header">
+      <h2>PC GAMER de R$6.300–6.500</h2>
+    </div>
+    <div class="build-body">
+      <p>Plataforma AM5: Ryzen 5 7600 + RX 6750 XT + 32 GB DDR5. Perfeito para alta resolução e produtividade.</p>
+      <ul class="parts">
+        <li><strong>Ryzen 5 7600</strong> – R$1.680,89 - <a href="https://amzn.to/3QX3jb9" target="_blank">link</a></li>
+        <li><strong>Cooler Deepcool Ag400</strong> – R$152,90 - <a
+            href="https://www.mercadolivre.com.br/cooler-deepcool-ag400-preto-120mm-intel-e-amd/p/MLB33315184?pdp_filters=item_id%3AMLB4034653211&from=gshop&matt_tool=14213447&matt_word=&matt_source=bing&matt_campaign=MLB_ML_BING_AO_CE-ALL-ALL_X_PLA_ALLB_TXS_ALL&matt_campaign_id=382858295&matt_ad_group=CE&matt_match_type=e&matt_network=o&matt_device=c&matt_keyword=default&msclkid=23d316fc0eb5106f8e7b7ee7eb36d93c&utm_source=bing&utm_medium=cpc&utm_campaign=MLB_ML_BING_AO_CE-ALL-ALL_X_PLA_ALLB_TXS_ALL&utm_term=4581596253419784&utm_content=CE"
+            target="_blank">link</a></li>
+        <li><strong>Placa Mãe Gigabyte B650M</strong> – R$1.099,00 – <a href="https://amzn.to/4jfXwK0"
+            target="_blank">link</a></li>
+        <li><strong>Memória RAM 32GB DDR5 (2x16GB) Lembre-se de comprar dois pentes!</strong> – R$848,00 – <a
+            href="https://amzn.to/41QtNkW" target="_blank">link</a></li>
+        <li><strong>SSD NVMe 1TB</strong> – R$462,00 – <a href="https://amzn.to/4iSxzQS" target="_blank">link</a></li>
+        <li><strong>Fonte Gamdias Cyclops 650W</strong> – R$371,80 – <a href="https://amzn.to/4lRzXJm"
+            target="_blank">link</a></li>
+        <li><strong>RX 7600 8GB GDDR6</strong> – R$ 1.799,90 – <a
+            href="https://www.terabyteshop.com.br/produto/25051/placa-de-video-asrock-amd-radeon-rx-7600-challenger-oc-8gb-gddr6-fsr-ray-tracing-90-ga41zz-00uanf?p=458658"
+            target="_blank">link</a></li>
+        <li><strong>Opção 1: Gabinete Branco Com 4 Fans RGB</strong> – R$318,00 – <a href="https://amzn.to/3FJIiye"
+            target="_blank">link</a></li>
+        <li><strong>Opção 2: Gabinete Preto Com 4 Fans RGB</strong> – R$324,00 – <a href="https://amzn.to/446l2EO"
+            target="_blank">link</a></li>
+      </ul>
+      <div class="total">💸 Valor total: R$6.300</div>
+    </div>
+  </section>
+
+  <!-- PC 7400 -->
+  <section class="build" id="pc7400">
+    <div class="build-header">
+      <h2>PC GAMER de R$7.400</h2>
+    </div>
+    <div class="build-body">
+      <p>Premium: Ryzen 5 7600 + RX 7700 XT + 32 GB DDR5 + water cooler 360 mm. Máximo desempenho e estilo.</p>
+      <ul class="parts">
+        <li><strong>Ryzen 5 7600</strong> – R$1.680,89 - <a href="https://amzn.to/3QX3jb9" target="_blank">link</a></li>
+        <li><strong>Opção 1: Water Cooler Mancer Mystic G1 360mm (opção por estética)</strong> – R$425,90 - <a
+            href="https://amzn.to/3EadJkQ" target="_blank">link</a></li>
+        <li><strong>Opção 2: Cooler Deepcool Ag400</strong> – R$152,90 - <a
+            href="https://www.mercadolivre.com.br/cooler-deepcool-ag400-preto-120mm-intel-e-amd/p/MLB33315184?pdp_filters=item_id%3AMLB4034653211&from=gshop&matt_tool=14213447&matt_word=&matt_source=bing&matt_campaign=MLB_ML_BING_AO_CE-ALL-ALL_X_PLA_ALLB_TXS_ALL&matt_campaign_id=382858295&matt_ad_group=CE&matt_match_type=e&matt_network=o&matt_device=c&matt_keyword=default&msclkid=23d316fc0eb5106f8e7b7ee7eb36d93c&utm_source=bing&utm_medium=cpc&utm_campaign=MLB_ML_BING_AO_CE-ALL-ALL_X_PLA_ALLB_TXS_ALL&utm_term=4581596253419784&utm_content=CE"
+            target="_blank">link</a></li>
+        <li><strong>Placa Mãe Gigabyte B650M</strong> – R$1.099,00 – <a href="https://amzn.to/4jfXwK0"
+            target="_blank">link</a></li>
+        <li><strong>Memória RAM 32GB DDR5 (2x16GB) Lembre-se de comprar dois pentes!</strong> – R$848,00 – <a
+            href="https://amzn.to/41QtNkW" target="_blank">link</a></li>
+        <li><strong>SSD NVMe 1TB</strong> – R$462,00 – <a href="https://amzn.to/4iSxzQS" target="_blank">link</a></li>
+        <li><strong>Fonte Gamdias Cyclops 650W</strong> – R$371,80 – <a href="https://amzn.to/4lRzXJm"
+            target="_blank">link</a></li>
+        <li><strong>RX 6750 XT 12GB GDDR6</strong> – R$ 2.799,99 – <a href="https://www.kabum.com.br/produto/528811"
+            target="_blank">link</a></li>
+        <li><strong>Opção 1: Gabinete Branco Com 4 Fans RGB</strong> – R$318,00 – <a href="https://amzn.to/3FJIiye"
+            target="_blank">link</a></li>
+        <li><strong>Opção 2: Gabinete Preto Com 4 Fans RGB</strong> – R$324,00 – <a href="https://amzn.to/446l2EO"
+            target="_blank">link</a></li>
+      </ul>
+      <div class="total">💸 Valor total: R$7.400</div>
+    </div>
+  </section>
+
+</body>
+
+</html>

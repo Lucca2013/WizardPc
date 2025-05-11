@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="WizardPc - Setup Gamer Perfeito | Componentes High-End" />
+    <title>WizardPc - Setup Gamer Perfeito</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+    <style>
+        :root {
+            --primary: #0066ff;
+            --bg: #0f0f0f;
+            --card: #1a1a1a;
+            --text: #eaeaea;
+            --accent: #1c1c1c;
+            --destaque: #ff3c00;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            font-size: 18px;
+            padding-top: 120px;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background-color: var(--accent);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+            border-bottom: 1px solid #222;
+        }
+
+        .logo img {
+            height: 48px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+
+        nav ul li a {
+            font-size: 16px;
+            padding: 10px 14px;
+            border-radius: 6px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+
+        nav ul li a::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .first_row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .item {
+            background-color: var(--card);
+            border-radius: 12px;
+            overflow: hidden;
+            text-align: center;
+            width: 320px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .item:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+        }
+
+        .item img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .item p {
+            font-size: 22px;
+            font-weight: 600;
+            padding: 18px 0;
+            background-color: var(--accent);
+        }
+
+
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .logo img {
+                height: 40px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .item {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="/">
+                <img src="/images/logo.png" alt="Logo da Wizard PC" />
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/pcs_prontos">PCs Prontos</a></li>
+                <li><a href="/componentes/">Componentes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="first_row">
+        <div class="item">
+            <a href="/pcs_prontos/">
+                <img src="images/pcs_montados.png" alt="Imagem de PCs Prontos" />
+                <p>PCs Prontos</p>
+            </a>
+        </div>
+        <div class="item">
+            <a href="/componentes/">
+                <img src="images/componentes.png" alt="Imagem de Componentes" />
+                <p>Componentes</p>
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://www.instagram.com/luccafelipetto/" target="_blank">
+                <img src="images/instagram_card.png" alt="Imagem do Instagram" />
+                <p>Instagram</p>
+            </a>
+        </div>
+
+    </section>
+</body>
+
+</html>
