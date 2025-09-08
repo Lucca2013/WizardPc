@@ -1,0 +1,2 @@
+*.html linguist-detectable=false
+##I know that is strange, but I dont want to show that 50% of my codes in initial page is HTML
